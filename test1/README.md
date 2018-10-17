@@ -45,5 +45,6 @@ HAVING d.department_name in ('IT','Sales');
 |   5 |     TABLE ACCESS FULL| EMPLOYEES      |   107 |   749 |     3   (0)| 00:00:01 |
 ---------------------------------------------------------------------------------------
 
-#### 优化器显示 ```There are no recommendations to improve the statement.```表示没有推荐的优化方法.
-### 明显的第二个sql语句更加优化
+#### 对于两个sql，优化指导显示显示 ```There are no recommendations to improve the statement.```表示没有推荐的优化方法.
+##  分析：
+#### 对于第一个sql,计划显示操作数更多，但是总体读取行和字节更少。对于第二个sql，计划显示操作数更少，但是查询的行数和字符数目更多，所以第一个sql语句更加优秀。
