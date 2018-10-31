@@ -1,4 +1,4 @@
-创建角色con_res_view16和用户new_user16，并授权和分配空间
+### 创建角色con_res_view16和用户new_user16，并授权和分配空间
  ```sql
  SQL>CREATE ROLE con_res_view16;
 角色已创建。
@@ -12,7 +12,7 @@ GRANT con_res_view TO new_user16;
 Grant 成功。
 ```
 
- 新用户new_user16连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
+### 新用户new_user16连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
 ```sql
 SQL> show user;
 USER 为 "NEW_USER16"
@@ -33,7 +33,7 @@ wang
 
 ```
 
-hr查询new_user16授予它的视图myview
+### hr查询new_user16授予它的视图myview
 ```sql
 SQl>SELECT * FROM new_user16.myview;
 
